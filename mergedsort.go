@@ -55,14 +55,14 @@ func benchmark() string {
 	t = time.Now()
 	elapsed = t.Sub(start)
 	fmt.Println("sorted merge took ", elapsed)
-	result += fmt.Sprintf("- sorted then merge took:\t%v\n\n", elapsed)
+	result += fmt.Sprintf("- sorted then merge took:\t%v\n", elapsed)
 
 	start = time.Now()
 	execMergedSort(sliceA2, sliceB2)
 	t = time.Now()
 	elapsed = t.Sub(start)
 	fmt.Println("merged sort took ", elapsed)
-	result += fmt.Sprintf("- merged then sort took:\t%v\n", elapsed)
+	result += fmt.Sprintf("- merged then sort took:\t%v\n\n", elapsed)
 
 	fmt.Print("\n\n")
 	return result
