@@ -29,6 +29,7 @@ func main() {
 func ask() string {
 	fmt.Println("1. palindrome validator")
 	fmt.Println("2. a look at list merging solution")
+	fmt.Println("3. benchmark `merged sort` and `sorted merge`")
 	reader := bufio.NewReader(os.Stdin)
 	char, _, err := reader.ReadRune()
 

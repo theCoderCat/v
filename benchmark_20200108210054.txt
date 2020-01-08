@@ -1,0 +1,50 @@
+test 1
+generated 2 arrays with 48498081 and 49727887 items in 6.042632237s
+- sorted then merge took:	31.95905253s
+- merged then sort took:	32.932468613s
+
+test 2
+generated 2 arrays with 46142309 and 15432758 items in 3.234108343s
+- sorted then merge took:	19.745100575s
+- merged then sort took:	19.510425144s
+
+test 3
+generated 2 arrays with 33896097 and 91315052 items in 7.203047465s
+- sorted then merge took:	41.047058108s
+- merged then sort took:	43.874486561s
+
+test 4
+generated 2 arrays with 97064274 and 34908085 items in 8.49194269s
+- sorted then merge took:	46.334109917s
+- merged then sort took:	41.695304678s
+
+test 5
+generated 2 arrays with 20037783 and 20902519 items in 2.198090856s
+- sorted then merge took:	12.110472436s
+- merged then sort took:	12.21420898s
+
+test 6
+generated 2 arrays with 88280060 and 22576735 items in 5.632610591s
+- sorted then merge took:	34.199536327s
+- merged then sort took:	34.601515881s
+
+test 7
+generated 2 arrays with 76362478 and 51834741 items in 6.614243152s
+- sorted then merge took:	39.806464642s
+- merged then sort took:	41.675526337s
+
+test 8
+generated 2 arrays with 97414814 and 87836343 items in 9.063764479s
+- sorted then merge took:	1m0.367464983s
+- merged then sort took:	1m0.564575247s
+
+test 9
+generated 2 arrays with 93283558 and 88902866 items in 8.939143347s
+- sorted then merge took:	56.389891504s
+- merged then sort took:	56.799378686s
+
+test 10
+generated 2 arrays with 72374065 and 34439436 items in 5.392221557s
+- sorted then merge took:	33.873502829s
+- merged then sort took:	34.518328832s
+
