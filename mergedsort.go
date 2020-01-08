@@ -44,14 +44,8 @@ func benchmark() string {
 	t := time.Now()
 	elapsed := t.Sub(start)
 
-	fmt.Println("generated 2 arrays with", sliceASize, "and", sliceBSize, "items in ", elapsed)
+	fmt.Println("generated 2 arrays with", sliceASize, "and", sliceBSize, "items in", elapsed)
 	result += fmt.Sprintf("generated 2 arrays with %d and %d items in %v\n", sliceASize, sliceBSize, elapsed)
-	start = time.Now()
-	execMergedSort(sliceA, sliceB)
-	t = time.Now()
-	elapsed = t.Sub(start)
-	fmt.Println("merged sort took ", elapsed)
-	result += fmt.Sprintf("- merged then sort took:\t%v\n", elapsed)
 
 	start = time.Now()
 	execSortedMerge(sliceA, sliceB)
@@ -59,6 +53,14 @@ func benchmark() string {
 	elapsed = t.Sub(start)
 	fmt.Println("sorted merge took ", elapsed)
 	result += fmt.Sprintf("- sorted then merge took:\t%v\n\n", elapsed)
+
+	start = time.Now()
+	execMergedSort(sliceA, sliceB)
+	t = time.Now()
+	elapsed = t.Sub(start)
+	fmt.Println("merged sort took ", elapsed)
+	result += fmt.Sprintf("- merged then sort took:\t%v\n", elapsed)
+
 	fmt.Print("\n\n")
 	return result
 }

@@ -57,11 +57,3 @@ func execPalindrome() {
 		fmt.Println("no! it's not a palindrome")
 	}
 }
-
-// helper function to check error
-func check(e error) {
-	if e != nil {
-		// log.Fatalf("cmd.Run() failed with %s\n", e)
-		panic(e)
-	}
-}

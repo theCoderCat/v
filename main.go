@@ -35,3 +35,10 @@ func ask() string {
 	check(err)
 	return string(char)
 }
+
+func check(e error) {
+	if e != nil {
+		// log.Fatalf("cmd.Run() failed with %s\n", e)
+		panic(e)
+	}
+}
