@@ -39,23 +39,26 @@ func benchmark() string {
 	sliceBSize := rand.Intn(90000000) + 10000000
 	fmt.Println("generating arrays...")
 	start := time.Now()
-	sliceA := generateBigSlice(sliceASize)
-	sliceB := generateBigSlice(sliceBSize)
+	sliceA1 := generateBigSlice(sliceASize)
+	sliceB1 := generateBigSlice(sliceBSize)
+
+	sliceA2 := generateBigSlice(sliceASize)
+	sliceB2 := generateBigSlice(sliceBSize)
 	t := time.Now()
 	elapsed := t.Sub(start)
 
-	fmt.Println("generated 2 arrays with", sliceASize, "and", sliceBSize, "items in", elapsed)
+	fmt.Println("generated 2 arrays with", sliceASize, "and 2 array with", sliceBSize, "items in", elapsed)
 	result += fmt.Sprintf("generated 2 arrays with %d and %d items in %v\n", sliceASize, sliceBSize, elapsed)
 
 	start = time.Now()
-	execSortedMerge(sliceA, sliceB)
+	execSortedMerge(sliceA1, sliceB1)
 	t = time.Now()
 	elapsed = t.Sub(start)
 	fmt.Println("sorted merge took ", elapsed)
 	result += fmt.Sprintf("- sorted then merge took:\t%v\n\n", elapsed)
 
 	start = time.Now()
-	execMergedSort(sliceA, sliceB)
+	execMergedSort(sliceA2, sliceB2)
 	t = time.Now()
 	elapsed = t.Sub(start)
 	fmt.Println("merged sort took ", elapsed)
