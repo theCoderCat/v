@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"sort"
 	"time"
 )
@@ -16,31 +17,50 @@ func generateBigSlice(size int) []int {
 }
 
 func startBenchmarking() {
-	for i:=1; i < 11; i++ {
+	// create new file to store benchmark result
+	now := time.Now()
+	filename := "./benchmark_" + now.Format("20060102150405") + ".txt"
+
+	f, err := os.Create(filename)
+	check(err)
+	defer f.Close()
+	for i := 1; i < 11; i++ {
 		fmt.Println("test ", i)
-		benchmark()
+		f.WriteString(fmt.Sprintf("test %d\n", i))
+		result := benchmark()
+		f.WriteString(result)
 	}
+	f.Sync()
 }
 
-func benchmark() {
+func benchmark() string {
+	result := ""
 	sliceASize := rand.Intn(90000000) + 10000000
 	sliceBSize := rand.Intn(90000000) + 10000000
-	fmt.Println("slices with ", sliceASize, " and ", sliceBSize, " items")
+	fmt.Println("generating arrays...")
+	start := time.Now()
 	sliceA := generateBigSlice(sliceASize)
 	sliceB := generateBigSlice(sliceBSize)
-
-	start := time.Now()
-	execMergedSort(sliceA, sliceB)
 	t := time.Now()
 	elapsed := t.Sub(start)
+
+	fmt.Println("generated 2 arrays with", sliceASize, "and", sliceBSize, "items in ", elapsed)
+	result += fmt.Sprintf("generated 2 arrays with %d and %d items in %v\n", sliceASize, sliceBSize, elapsed)
+	start = time.Now()
+	execMergedSort(sliceA, sliceB)
+	t = time.Now()
+	elapsed = t.Sub(start)
 	fmt.Println("merged sort took ", elapsed)
+	result += fmt.Sprintf("- merged then sort took:\t%v\n", elapsed)
 
 	start = time.Now()
 	execSortedMerge(sliceA, sliceB)
 	t = time.Now()
 	elapsed = t.Sub(start)
 	fmt.Println("sorted merge took ", elapsed)
+	result += fmt.Sprintf("- sorted then merge took:\t%v\n\n", elapsed)
 	fmt.Print("\n\n")
+	return result
 }
 
 func execMergedSort(sliceA []int, sliceB []int) []int {
