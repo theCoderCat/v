@@ -51,23 +51,25 @@ func benchmark() string {
 	result += fmt.Sprintf("generated 2 arrays with %d and %d items in %v\n", sliceASize, sliceBSize, elapsed)
 
 	start = time.Now()
-	execSortedMerge(sliceA1, sliceB1)
-	t = time.Now()
-	elapsed = t.Sub(start)
-	fmt.Println("sorted merge took ", elapsed)
-	result += fmt.Sprintf("- sorted then merge took:\t%v\n", elapsed)
-
-	start = time.Now()
 	execMergedSort(sliceA2, sliceB2)
 	t = time.Now()
 	elapsed = t.Sub(start)
 	fmt.Println("merged sort took ", elapsed)
-	result += fmt.Sprintf("- merged then sort took:\t%v\n\n", elapsed)
+	result += fmt.Sprintf("- merged then sort took:\t%v\n", elapsed)
+
+	start = time.Now()
+	execSortedMerge(sliceA1, sliceB1)
+	t = time.Now()
+	elapsed = t.Sub(start)
+	fmt.Println("sorted merge took ", elapsed)
+	result += fmt.Sprintf("- sorted then merge took:\t%v\n\n", elapsed)
 
 	fmt.Print("\n\n")
 	return result
 }
 
+// time complexity : O ( (sizeA + sizeB) (log(sizeA + sizeB)) )
+// extra space used : O ( (sizeA + sizeB) )
 func execMergedSort(sliceA []int, sliceB []int) []int {
 	merged := append(sliceA, sliceB...)
 	sort.Ints(merged)
