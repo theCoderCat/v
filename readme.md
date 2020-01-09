@@ -1,4 +1,19 @@
-#
+# In this repo
+
+This repo contains:
+
+- Source code for 2 coding problems
+- Compiled program to demontrate problems and solutions (for MacOS and Windows)
+- Architecture design for to do app
+- Explainations and answers for other questions
+- Benchmark results to compare 2 solution for merging problem
+
+## How to use compiled program:
+- Please run program from terminal/cmd/shell... according to your platform
+  - `veltra_linux` on Linux
+  - `veltra_macos` on MacOS
+  - `veltra.exe` on Windows
+- Pick an option when prompted
 
 ## 1. Coding problem
 
@@ -10,6 +25,13 @@ Assumed the question should be "ignoring case, spaces and special character".
 
 I also assumed that we only need to validate string written in alphanumeric writting system.
 
+The solution is quite simple:
+- take a string
+- keep only alphanumeric characters, strip all others
+- make all the characters lower case (upper case also okay)
+- loop and compare first and last characters, then second and second last, and so on until we reach the middle of the string...
+- return as soon as the compare operator yield `false`
+
 Let's say the given string have n characters.
 
 - Time complexity: O(n/2)
@@ -17,6 +39,7 @@ Let's say the given string have n characters.
 
 ### Merge 2 arrays in sorted order
 
+My chosen solution is *sort first, then merge*
 Please take a look at `sortedmerge.go` for the code.
 
 This solution will sort 2 smaller arrays before merging.
