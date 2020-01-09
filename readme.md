@@ -47,7 +47,7 @@ Let's say sA is the size of the first array and sB is the size of second array
 - Time complexity: O(sA log sA + sB log sB + sA + sB)
 - Space complexity: O(sA + sB)
 
-> Another solution is merge 2 arrays first then sort the big array
+> Another solution is ***merge 2 arrays first then sort*** the big array
 > - Time complexity: 0((sA+sB) log (sA+sB))
 > - Space complexity: O(sA + sB)
 
@@ -69,23 +69,23 @@ Before WebSocket, port 80 full-duplex communication was attainable using Comet c
 
 ### Where did you access from?
 
-  - *Europe. Why?*
-  - Our web servers are located in Japan and internet connection between Europe and Japan is not very good. May be that's why. We will try to serve content from servers in Europe.
+  -- *Europe. Why?*  
+  -- Our web servers are located in Japan and internet connection between Europe and Japan is not very good. May be that's why. We will try to serve content from servers in Europe.
 
 ### Which part of the website is slow or it's slow across all parts of the website?
 
-  - *The homepage where you introduce the company with some text and image was fine, I could load it in matter of seconds. But tours listing with 50 tours, 4 or 5 customization options each, all showed at the same time and tour detail pages which display every possibly related tours presented in the system, they took forever to load.*
-  - The homepage only contain some static information and very little dynamic content, while tours listing and and tour detail pages have complex data and required complicated operations to fetch all variations, related tours, status, price calculations... and they need to be fetched from database, recalculated again every time you access the page because we didnt have any methods to cache these information We'll try to cache the content when there're changes happen to the database so they're ready to be served next time you access.
+  -- *The homepage where you introduce the company with some text and image was fine, I could load it in matter of seconds. But tours listing with 50 tours, 4 or 5 customization options each, all showed at the same time and tour detail pages which display every possibly related tours presented in the system, they took forever to load.*  
+  -- The homepage only contain some static information and very little dynamic content, while tours listing and and tour detail pages have complex data and required complicated operations to fetch all variations, related tours, status, price calculations... and they need to be fetched from database, recalculated again every time you access the page because we didnt have any methods to cache these information We'll try to cache the content when there're changes happen to the database so they're ready to be served next time you access.
 
 ### Is it always slow or only slow at certain time?
 
-  - *It's usually slow at around 10am~16pm, everything are quite fast at 1am.*
-  - Might be because there're too many traffics happen during a certain time (day time, when people try to find a tour all at once), this happen because load balancing is not very effective or doesnt work at all and overload the server. We'll try to improve/implement load balancing solution.
+  -- *It's usually slow at around 10am~16pm, everything are quite fast at 1am.*  
+  -- Might be because there're too many traffics happen during a certain time (day time, when people try to find a tour all at once), this happen because load balancing is not very effective or doesnt work at all and overload the server. We'll try to improve/implement load balancing solution.
 
 ### What kind of internet connection you're using?
 
-  - *Dial-up connection with 64kbps bandwidth. I've been using it for 20 years now.*
-  - Tch! Tough luck.
+  -- *Dial-up connection with 64kbps bandwidth. I've been using it for 20 years now.*  
+  -- Tch! Tough luck.
 
 ## 4. Todo web app
 
