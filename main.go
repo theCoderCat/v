@@ -9,7 +9,7 @@ import (
 func main() {
 	fmt.Println("Which one do you wanna play with?")
 	v := ask()
-	if v != "1" && v != "2" && v != "3" {
+	for v != "1" && v != "2" && v != "3" {
 		fmt.Println("invalid option, please pick again")
 		v = ask()
 	}
