@@ -1,20 +1,26 @@
 #
 
-## Coding problem
+## 1. Coding problem
 
-1. Palindrome validator
-Please take a look at `palindrome.go` for coding solution.
-Assumed the question should be "ignoring case, spaces and special character"
-I also assumed that we only need to validate string written in alphanumeric writting system
+### Palindrome validator
+
+Please take a look at `palindrome.go` for the code.
+
+Assumed the question should be "ignoring case, spaces and special character".
+
+I also assumed that we only need to validate string written in alphanumeric writting system.
 
 Let's say the given string have n characters.
 
 - Time complexity: O(n/2)
 - Space complexity: O(n)
 
-2. Merge 2 arrays in sorted order
-Please take a look at `sortedmerge.go` for coding solution
-This solution will sort 2 smaller arrays before merging
+### Merge 2 arrays in sorted order
+
+Please take a look at `sortedmerge.go` for the code.
+
+This solution will sort 2 smaller arrays before merging.
+
 Let's say sA is the size of the first array and sB is the size of second array
 
 - Time complexity: O(sA log sA + sB log sB + sA + sB)
@@ -31,7 +37,7 @@ But how much faster? I was curious, so I decided to implement the second solutio
 
 Sorted then merge solution run faster most of the test. But only slightly faster.
 
-## Websocket
+## 2. Websocket
 
 WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection.
 
@@ -39,7 +45,7 @@ The WebSocket protocol enables interaction between a web browser (or other clien
 
 Before WebSocket, port 80 full-duplex communication was attainable using Comet channels; however, Comet implementation is nontrivial, and due to the TCP handshake and HTTP header overhead, it is inefficient for small messages. 
 
-## Hey! Your website is slow!
+## 3. Hey! Your website is slow!
 
 ### Where did you access from?
 
@@ -61,7 +67,7 @@ Before WebSocket, port 80 full-duplex communication was attainable using Comet c
 - Dial-up connection with 64kbps bandwidth. I've been using it for 20 years now.
 - Tch! Tough luck.
 
-## Todo web app
+## 4. Todo web app
 
 ### Architect diagram
 
