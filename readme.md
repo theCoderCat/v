@@ -6,13 +6,13 @@ This repo contains:
 - Compiled program to demontrate problems and solutions (for MacOS and Windows)
 - Architecture design for to do app
 - Explainations and answers for other questions
-- Benchmark results to compare 2 solution for merging problem
+- Benchmark results to compare 2 solutions for merging problem
 
 ## How to use compiled program:
 - Please run program from terminal/cmd/shell... according to your platform
-  - `veltra_linux` on Linux
-  - `veltra_macos` on MacOS
-  - `veltra.exe` on Windows
+  - `v_linux` on Linux
+  - `v_macos` on MacOS
+  - `v.exe` on Windows
 - Pick an option when prompted
 
 ## 1. Coding problems
