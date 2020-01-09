@@ -97,6 +97,10 @@ Before WebSocket, port 80 full-duplex communication was attainable using Comet c
 ### How the system works
 
 - A web application
+- Front-end with VueJS
+- Back-end with Go
+- Data storage is MySQL
+
 - User go to the website
 - User adds tasks
 - User marks tasks as finished
@@ -109,13 +113,11 @@ Before WebSocket, port 80 full-duplex communication was attainable using Comet c
 - Can user share their tasks with others?
 - Does task have deadline?
 - How many people will use this system?
-- What language should I use for the backend?
-- How will I store the data? (text files, mysql, postgre sql, mongodb,...)
-- What framework should I use in frontend?
 - Do I need a mobile app later?
 
 ### Limitation
 
+- Cannot remind user when a task due in tomorrow
 - 
 
 ## Source of information
