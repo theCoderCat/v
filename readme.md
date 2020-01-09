@@ -92,6 +92,7 @@ Before WebSocket, port 80 full-duplex communication was attainable using Comet c
 ### Architect diagram
 
 *Diagram goes here*
+![To do web app diagram](https://github.com/theCoderCat/v/raw/master/todo.png "To do web app diagram")
 
 ### How the system works
 
