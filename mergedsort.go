@@ -68,7 +68,7 @@ func benchmark() string {
 	return result
 }
 
-// time complexity : O ( (sizeA + sizeB) (log(sizeA + sizeB)) )
+// time complexity : O ( (sizeA + sizeB) log (sizeA + sizeB) )
 // extra space used : O ( (sizeA + sizeB) )
 func execMergedSort(sliceA []int, sliceB []int) []int {
 	merged := append(sliceA, sliceB...)
