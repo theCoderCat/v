@@ -23,7 +23,7 @@ This repo contains:
 Please take a look at `palindrome.go` for the code.  
 Assumed the question should be "ignoring case, spaces and special characters".  
 I also assumed that we only need to validate strings written in alphanumeric writting system.
-
+xc  
 The solution is quite simple:
 - take a string
 - keep only alphanumeric characters, strip all others
@@ -92,21 +92,40 @@ Before WebSocket, port 80 full-duplex communication was attainable using Comet c
 
 ### Architect diagram
 
-*Diagram goes here*
 ![To do web app diagram](https://github.com/theCoderCat/v/raw/master/todo.png "To do web app diagram")
 
 ### How the system works
 
 - A web application
-- Front-end with VueJS
-- Back-end with Go
+- Front-end scripting with VueJS
+- Back-end logic written in Go
 - Data storage is MySQL
+- Communicate between server and client by RestAPI
 
 - User go to the website
-- User adds tasks
-- User marks tasks as finished
+- User adds tasks 
+  - client send POST request with new task data to server 
+  - server validate data 
+  - store data in database
+  - return result to client
+- User marks tasks as finished 
+  - client send GET request with task ID to server 
+  - server validate data 
+  - update task data in database
+  - return result to client
+- User updates tasks content 
+  - client send PUT request with task ID and updated task content to server
+  - server validate data
+  - update task data in database
+  - return update result to client
 - User views the content of the task
+  - send GET request with task ID to server
+  - server get task data from database
+  - return the result to client
 - User deletes task when he doesn't feel like finishing it
+  - client send DELETE request with task ID to server
+  - server try to delete task data in database
+  - return delete result to client
 - User's amazed because the page doesn't try to reload every time he click on something
 
 ### Things to consider
@@ -116,10 +135,14 @@ Before WebSocket, port 80 full-duplex communication was attainable using Comet c
 - How many people will use this system?
 - Do I need a mobile app later?
 
-### Limitation
+### Limitations
 
-- Cannot remind user when a task due in tomorrow
-- 
+- This is a very basic application with basic features like create/view/update/delete tasks
+- It lack of advanced features:
+  - Cannot remind user when a task due in tomorrow
+  - Cannot let other users view task
+  - Cannot assign task to other users
+  - Cannot attach files, images to tasks
 
 ## Source of information
 

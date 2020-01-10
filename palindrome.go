@@ -43,11 +43,12 @@ func execPalindrome() {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("may i have some text please? \n")
 	text, _ := reader.ReadString('\n')
+	text = strings.Replace(text, "\n", "", -1)
 
 	// make it lowercase
 	processedString := normalize(text)
 	fmt.Println("original string:\t", text)
-	fmt.Println("string :\t", processedString)
+	fmt.Println("stripped string:\t", processedString)
 
 	equal := test(processedString)
 

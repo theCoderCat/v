@@ -12,8 +12,8 @@ func merge() {
 	fmt.Println("list B: ", listB)
 	merged := execSortedMerge(listA, listB)
 	fmt.Println("merged and sorted result: ", merged)
-	fmt.Println("total time complexity: O(sAlogsA + sBlogsB + sA + sB)")
-	fmt.Println("total space complexity: O(sA + sB)")
+	fmt.Println("time complexity: O(sAlogsA + sBlogsB + sA + sB)")
+	fmt.Println("space complexity: O(sA + sB)")
 }
 
 func execSortedMerge(listA []int, listB []int) []int {
