@@ -48,7 +48,7 @@ Let's say sA is the size of the first array and sB is the size of second array
 - Space complexity: O(sA + sB)
 
 > Another solution is ***merge 2 arrays first then sort*** the big array
-> - Time complexity: 0((sA+sB) log (sA+sB))
+> - Time complexity: O((sA+sB) log (sA+sB))
 > - Space complexity: O(sA + sB)
 
 Take a look at the time complexity (I had to use a calculator actually), we can see that the first solution (sort then merge) is faster than the second solution (merge then sort).
