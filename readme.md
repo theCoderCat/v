@@ -22,8 +22,7 @@ This repo contains:
 
 Please take a look at `palindrome.go` for the code.  
 Assumed the question should be "ignoring case, spaces and special characters".  
-I also assumed that we only need to validate strings written in alphanumeric writting system.
-xc  
+I also assumed that we only need to validate strings written in alphanumeric writting system.  
 The solution is quite simple:
 - take a string
 - keep only alphanumeric characters, strip all others
