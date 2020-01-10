@@ -9,7 +9,8 @@ This repo contains:
 - Benchmark results to compare 2 solutions for merging problem
 
 ## How to use compiled program:
-- Please run program from terminal/cmd/shell... according to your platform
+- Please download compiled program from here: https://github.com/theCoderCat/v/releases/tag/1.0
+- Run program from terminal/cmd/shell... according to your platform
   - `v_linux` on Linux
   - `v_macos` on MacOS
   - `v.exe` on Windows
